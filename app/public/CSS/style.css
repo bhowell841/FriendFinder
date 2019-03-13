@@ -1,0 +1,78 @@
+img {
+    width: 100%;
+    /* height: 50%;  */
+}
+
+.row {
+    text-align: center;
+}
+
+.main{
+    font-family: 'Abel', sans-serif;
+    /* background-image: url(../CSS/images/stjamesgate.jpg);  */
+    background-image: url(../CSS/images/connemara.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.survey{
+    background-image: url(../CSS/images/background.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Abel', sans-serif;
+    /* color: #d9df1d; */
+
+}
+
+.container main{
+    height: 300px;
+    background-color: #196637;
+    border-radius: 5px;
+    border: 1px solid #D9DF1D;
+    color: #d9df1d;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.container{
+    background-color: #196637;
+    border-radius: 5px;
+    border: 1px solid #D9DF1D;
+    color: #d9df1d;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    background-color: #4cbb17;
+    color: #d9df1d;
+    border: solid 1px #D9DF1D;
+    font-size: 30px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #009a49;
+    border: solid 1px #d9df1d;
+    color: #d9df1d;
+    /* color: #3c2e27; */
+}
+
+.chosen-select{
+    /* background-color: #4cbb17; */
+    background-color: #009a49;
+    /* background-color: #196637 */
+    color: white;
+}
+
+h1 {
+    margin-top: 70px;
+}
+
+.nav {
+    height: 100px;
+}

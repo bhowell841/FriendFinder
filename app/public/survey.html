@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Friend Finder</title>
 
@@ -7,37 +8,153 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- CSS Reset -->
     <link rel="stylesheet" href="css/reset.css">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-    <div class="container">
-            <div class='card-panel yellow darken-1 col s12 center-align'>
-                    <h4><strong>Survey Questions</strong></h4>
-                    <div class='card-panel left-align white'></div>
-    <h5><strong>Question 3</strong></h5>
-                <p>I find myself chasing the end of a rainbow.</p>
-                <select data-placeholder="" class="browser-default" id="q3">
-                    <option value="">Choose an option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
 
-                
-                    </div>
-                </div>
+<body class="survey">
+
+    <div class="container">
+        <h2>Survey Questions</h2>
+        <hr>
+
+        <h3><strong>About You</strong></h3>
+        <h4>Name (Required)</h4>
+        <input type="text" id="name" class="form-control" required>
+
+        <h4>Link to Photo Image (Required)</h4>
+        <input type="text" id="photo" class="form-control" required>
+
+        <hr>
+
+        <h3><strong>Question 1</strong></h3>
+        <h4>You consistently want to locate the end of a rainbow.</h4>
+        <select class="chosen-select" id="question1">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 2</strong></h3>
+        <h4>You have never seen a snake and quietly believe they are not real.</h4>
+        <select class="chosen-select" id="question2">
+            <option value="">Select An Option"</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 3</strong></h3>
+        <h4>You are drawn to all things gold.</h4>
+        <select class="chosen-select" id="question3">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 4</strong></h3>
+        <h4>You find people speaking with a brogue to be 2-3 times sexier than normal.</h4>
+        <select class="chosen-select" id="question4">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 5</strong></h3>
+        <h4>You think all coffee contains whisky.</h4>
+        <select class="chosen-select" id="question5">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 6</strong></h3>
+        <h4>You understand the term banjaxed.</h4>
+        <select class="chosen-select" id="question6">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 7</strong></h3>
+        <h4>You believe in fairies, because you have seen one.</h4>
+        <select class="chosen-select" id="question7">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 8</strong></h3>
+        <h4>You don't associate hurling with vomit.</h4>
+        <select class="chosen-select" id="question8">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 9</strong></h3>
+        <h4>You know what N-17 is.</h4>
+        <select class="chosen-select" id="question9">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h3><strong>Question 10</strong></h3>
+        <h4>You have met an old man in a pub and watched him flirt with your wife while you allowed him to buy you
+            Guinness after Guinness.</h4>
+        <select class="chosen-select" id="question10">
+            <option value="">Select An Option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4 ">
+                <button type="submit" class="btn" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                    Submit</button>
             </div>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-       
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
 </body>
+
 </html>
