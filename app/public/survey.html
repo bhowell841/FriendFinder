@@ -153,8 +153,63 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+            <div class="modal-body">
+              <h2 id="match-name"></h2>
+              <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+    
+        </div>
+      </div>
 
+    <script>
+        $('#submit').on("click", function () {
+            console.log($('#question10 option:selected').val());
+            var stuffToSave = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $('#question1 option:selected').val(),
+                    $('#question2 option:selected').val(),
+                    $('#question3 option:selected').val(),
+                    $('#question4 option:selected').val(),
+                    $('#question5 option:selected').val(),
+                    $('#question6 option:selected').val(),
+                    $('#question7 option:selected').val(),
+                    $('#question8 option:selected').val(),
+                    $('#question9 option:selected').val(),
+                    $('#question10 option:selected').val()
+                ]
+            };
+            console.log(stuffToSave);
+            $.ajax({
+                url: "/api/friends",
+                method: "post",
+                data: stuffToSave
+            }).then(function (data) {
+                console.log("stuffFromBackend", data)
+                
+                // Get the match to display on the modal
+                $('#match-name').text(data.name);
+                $('#match-img').attr("src", data.photo);
+                 // Show the modal with the best match
+                $("#results-modal").modal("toggle");
+            });
+        });
+    </script>
 </body>
 
 </html>
