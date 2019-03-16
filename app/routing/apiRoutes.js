@@ -19,23 +19,24 @@ module.exports = function (app) {
         var irishFriend = "";
         var irishImage = "";
         var greatestDifference = 100;
-        var match = "";
+        
 
         for (var i = 0; i < friends.length; i++) {
             // check we getting the freinds database
-            console.log("irishFriend: " + JSON.stringify(friends[i]));
-            var userDifference = 0;
+            console.log("dataBaseFriends: " + JSON.stringify(friends[i]));
+            
             // get friends score
             console.log("friends score: " + friends[i].score);
             console.log("userScore: " + userScore)
             var compare = Math.abs(parseInt(friends[i].score) - parseInt(userScore));
             console.log("compare: " + compare);
 
+            
             if (compare < greatestDifference) {
                 greatestDifference = compare;
-                match = friends[i].name;
+                irishFriend = friends[i].name;
                 irishImage = friends[i].photo;
-                console.log("match: " + match + " difference: " + greatestDifference);
+                console.log("match: " + irishFriend + " difference: " + greatestDifference);
             }
         }; // end for loop
         console.log("Loop is over")
@@ -44,11 +45,12 @@ module.exports = function (app) {
 
 
         // send back to browser the best friend match
-    // res.json(friends[bestFriendIndex]);
         res.json({
             message: "We found your Mick.",
-            match: match,
+            match: irishFriend,
             irishImage: irishImage
         });
+        
+        
     });
 };
