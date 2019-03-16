@@ -8,8 +8,9 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
-        console.log("data coming in: ", req.body);
+        // console.log("data coming in: ", req.body);
         var newUser = req.body;
+        
         console.log("newUser: " + JSON.stringify(newUser));
 
         var userScore = newUser.score;
@@ -22,14 +23,14 @@ module.exports = function (app) {
         
 
         for (var i = 0; i < friends.length; i++) {
-            // check we getting the freinds database
-            console.log("dataBaseFriends: " + JSON.stringify(friends[i]));
+            // check we getting the friends database
+            // console.log("dataBaseFriends: " + JSON.stringify(friends[i]));
             
             // get friends score
-            console.log("friends score: " + friends[i].score);
-            console.log("userScore: " + userScore)
+            // console.log("friends score: " + friends[i].score);
+            // console.log("userScore: " + userScore)
             var compare = Math.abs(parseInt(friends[i].score) - parseInt(userScore));
-            console.log("compare: " + compare);
+            // console.log("compare: " + compare);
 
             
             if (compare < greatestDifference) {
@@ -39,14 +40,19 @@ module.exports = function (app) {
                 console.log("match: " + irishFriend + " difference: " + greatestDifference);
             }
         }; // end for loop
-        console.log("Loop is over")
+
+        // console.log("Loop is over")
+        // console.log("Final Match: " + irishFriend);
+        // console.log('FRIENDS ARRAY BEFORE!!!!! ', friends)
         // push the new user to the array
         friends.push(newUser);
 
+        // console.log('FRIENDS ARRAY AFTER!!!!! ', friends)
 
+        // console.log('IRISH FRIEND ', irishFriend)
+        // console.log('IRISH IMAGE ', irishImage)
         // send back to browser the best friend match
         res.json({
-            message: "We found your Mick.",
             match: irishFriend,
             irishImage: irishImage
         });

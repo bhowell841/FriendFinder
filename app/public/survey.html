@@ -235,10 +235,10 @@
                 data: stuffToSave
             }).done(function (data) {
                 // console.log("stuffFromBackend", JSON.stringify(data))
-
+                console.log('DATA????? ', data)
                 // Get the match to display on the modal
-                $('#match-name').text(data.name);
-                $('#match-img').attr("src", data.photo);
+                $('#match-name').text(data.match);
+                $('#match-img').attr("src", data.irishImage);
                 // Show the modal with the best match
                 $("#results-modal").modal("toggle");
             });
@@ -249,4 +249,3 @@
     });
 </script>
 
-<!-- then -->
