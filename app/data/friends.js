@@ -2,8 +2,9 @@
 
 const peoples = [
   {
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Sioban",
+    "photo":"https://randomuser.me/api/portraits/women/44.jpg",
+    "score": 32,
     "scores":[
         5,
         1,
@@ -15,6 +16,23 @@ const peoples = [
         5,
         4,
         1
+      ]
+  },
+  {
+    "name":"Seamus",
+    "photo":"https://randomuser.me/api/portraits/men/65.jpg",
+    "score": 40,
+    "scores":[
+        5,
+        4,
+        3,
+        5,
+        5,
+        2,
+        3,
+        5,
+        4,
+        4
       ]
   }
   

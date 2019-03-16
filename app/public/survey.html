@@ -165,7 +165,6 @@
             </div>
             <div class="modal-body">
               <h2 id="match-name"></h2>
-              <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -178,9 +177,20 @@
     <script>
         $('#submit').on("click", function () {
             console.log($('#question10 option:selected').val());
+            
+            // Cant get this to work in a loop (WTF!)
+            var score = parseInt($('#question1 option:selected').val()) + parseInt($('#question2 option:selected').val()) +
+            parseInt($('#question3 option:selected').val()) + parseInt($('#question4 option:selected').val()) +
+            parseInt($('#question5 option:selected').val()) + parseInt($('#question6 option:selected').val()) +
+            parseInt($('#question7 option:selected').val()) + parseInt($('#question8 option:selected').val()) +
+            parseInt($('#question9 option:selected').val()) + parseInt($('#question10 option:selected').val());
+
+            console.log("score: " + score)
+            
             var stuffToSave = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
+                score: score,
                 scores: [
                     $('#question1 option:selected').val(),
                     $('#question2 option:selected').val(),
@@ -200,7 +210,7 @@
                 method: "post",
                 data: stuffToSave
             }).then(function (data) {
-                console.log("stuffFromBackend", data)
+                console.log("stuffFromBackend", JSON.stringify(data))
                 
                 // Get the match to display on the modal
                 $('#match-name').text(data.name);
