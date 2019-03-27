@@ -4,6 +4,8 @@ Irish Friend Finder is a compatibility-based application.  This full-stack site 
 
 ### **Technology Used**
 
+HTML/CSS,
+Bootstrap,
 Javascript,
 Node.js,
 Express,
