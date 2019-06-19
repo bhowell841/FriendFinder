@@ -9,8 +9,8 @@ img {
 
 .main{
     font-family: 'Abel', sans-serif;
-    /* background-image: url(../CSS/images/stjamesgate.jpg);  */
-    background-image: url(../CSS/images/connemara.jpg);
+    background-image: url(../CSS/images/cliffs.jpg); 
+    /* background-image: url(../CSS/images/connemara.jpg); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
