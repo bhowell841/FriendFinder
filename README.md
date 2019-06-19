@@ -21,12 +21,13 @@ The following screenshots demonstrate how this application works.
 <br />
 
 The user is presented with the start page:
-<img width="1217" alt="Screen Shot 2019-03-27 at 2 44 34 PM" src="https://user-images.githubusercontent.com/17474969/55103777-81402e80-509f-11e9-9e22-536324159ae0.png">
+![Screen Shot 2019-06-19 at 1 59 30 PM](https://user-images.githubusercontent.com/17474969/59788829-942b5f00-929a-11e9-8705-919755b8195c.png)
+
 <br />
 
 On the start page the user may access the friends list and the Github repo:
 <br />
-<img width="271" alt="Screen Shot 2019-03-27 at 2 44 53 PM" src="https://user-images.githubusercontent.com/17474969/55103781-8309f200-509f-11e9-804e-9f773d7f9ae4.png">
+![Screen Shot 2019-06-19 at 1 59 42 PM](https://user-images.githubusercontent.com/17474969/59788836-95f52280-929a-11e9-8eff-12e4a35c6e08.png)
 <br />
 
 The user is required to enter their name and a picture (they may type N/A) and answer 10 questions rating their 'Irishness.'
